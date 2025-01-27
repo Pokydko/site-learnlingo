@@ -1,0 +1,33 @@
+.logo {
+  z-index: 100;
+  display: flex;
+  padding: 16px 0;
+  height: 100%;
+  /* display: inline-flex; */
+  /* color: #121417; */
+  /* line-height: 1.2; */
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+.logoSvg {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  padding: 0;
+  fill: #475467;
+}
+.logo:hover .logoSvg,
+.logo:focus .logoSvg {
+  fill: #d84343;
+}
+@media only screen and (max-width: 416px) {
+  .logo {
+    left: 16px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .logo {
+    left: calc(64px + (100% - 1440px) / 2);
+  }
+}

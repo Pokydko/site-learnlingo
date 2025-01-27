@@ -1,0 +1,11 @@
+.imgWrp {
+  display: flex;
+  height: 400px;
+}
+
+.notFoundMsg {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,60 @@
+.imageBg {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 30px;
+  background-color: var(--hero-background);
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 430px;
+  height: 430px;
+  /* max-height: 530px; */
+}
+
+.pngLayer {
+  position: absolute;
+  bottom: 145px;
+  max-width: 300px;
+  animation: 7s ease-in-out infinite shake;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+.svgLayer {
+  z-index: 2;
+  align-self: end;
+  width: 360;
+  height: auto;
+}
+
+@media only screen and (max-width: 1023px) {
+  .imageContainer {
+    width: 270px;
+    height: 330px;
+  }
+  .pngLayer {
+    bottom: 110px;
+    width: 220px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .imageContainer {
+    /* width: 700px; */
+  }
+}

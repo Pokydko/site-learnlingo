@@ -1,0 +1,45 @@
+.logReg {
+  display: flex;
+  height: 100%;
+}
+
+.log {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-right: 16px;
+  font-weight: 700;
+  transition: color ease-in 250ms;
+}
+.log:hover {
+  color: var(--btn-color);
+}
+
+.loginSvg {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.btnBlack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #121417;
+  color: #fff;
+  font-weight: 700;
+  transition: background-color ease-in 250ms;
+}
+.btnBlack:hover,
+.btnBlack:focus {
+  background-color: var(--btn-color);
+}
+
+/* @media only screen and (max-width: 1399px) {
+  .headerContainer {
+    padding: 0 5%;
+  }
+} */
