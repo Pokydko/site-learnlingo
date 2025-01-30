@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import css from "./DynamicImage.module.css";
+import webpWoman2 from "../../img/webpWoman@2x.webp";
+import pngWoman1 from "../../img/pngWoman@1x.png";
+import pngWoman2 from "../../img/pngWoman@2x.png";
 
 const DynamicImage = () => {
   // const heroFace = "url(./img/face@2x.webp)";
@@ -26,12 +29,14 @@ const DynamicImage = () => {
   return (
     <div className={css.imageBg}>
       <div className={css.imageContainer}>
-        <img
-          src="../src/img/face@2x.png"
-          // alt=""
-          className={css.pngLayer}
-        />
-
+        <picture className={css.pngLayer}>
+          <source srcSet={webpWoman2} type="image/webp" />
+          <source
+            srcSet={`${pngWoman1} 1x, ${pngWoman2} 2x`}
+            type="image/png"
+          />
+          <img src={pngWoman1} alt="Happy one behind laptop" />
+        </picture>
         <svg
           className={css.svgLayer}
           width="361"
