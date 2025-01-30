@@ -27,7 +27,7 @@ const DynamicImage = () => {
     <div className={css.imageBg}>
       <div className={css.imageContainer}>
         <img
-          src="/src/img/face@2x.png"
+          src="../src/img/face@2x.png"
           // alt=""
           className={css.pngLayer}
         />

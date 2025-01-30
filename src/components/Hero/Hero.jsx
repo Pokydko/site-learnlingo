@@ -1,4 +1,6 @@
 import css from "./Hero.module.css";
+import "./HeroGlobalStyles.css";
+
 import DynamicImage from "../DynamicImage/DynamicImage.jsx";
 import { NavLink } from "react-router-dom";
 

@@ -1,0 +1,14 @@
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  a.btn {
+    position: absolute;
+    right: 6%;
+    bottom: 0;
+    width: calc(35% - 43px);
+    min-width: 10%;
+  }
+}
+@media only screen and (max-width: 940px) and (min-width: 768px) {
+  a.btn {
+    width: calc(32% - 43px);
+  }
+}
