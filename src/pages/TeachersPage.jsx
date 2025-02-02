@@ -1,6 +1,8 @@
-import css from "./HomePage.module.css";
-// import Hero from "../components/Hero/Hero.jsx";
-
-export default function Home() {
-  return <></>;
+// import css from "./TeachersPage.module.css";
+export default function TeachersPage() {
+  return (
+    <div>
+      <h2>Teachers</h2>
+    </div>
+  );
 }

@@ -10,17 +10,17 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { campersReducer } from "./campers/slice";
+import { authReducer } from "./auth/slice";
 
-const persistConfig = {
-  key: "campers",
+const authPersistConfig = {
+  key: "auth",
   storage,
-  whitelist: ["campers"],
+  whitelist: ["token"],
 };
 
 export const store = configureStore({
   reducer: {
-    campers: persistReducer(persistConfig, campersReducer),
+    auth: persistReducer(authPersistConfig, authReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -29,11 +29,5 @@ export const store = configureStore({
       },
     }),
 });
-
-store.subscribe(() => {
-  const { campers } = store.getState();
-  localStorage.setItem("favoriteCampers", JSON.stringify(campers.favorites));
-  // localStorage.setItem("favoriteCampers", JSON.stringify([]));
-});
-
+export default store;
 export const persistor = persistStore(store);
