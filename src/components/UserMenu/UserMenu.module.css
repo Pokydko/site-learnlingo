@@ -1,9 +1,35 @@
 .wrapper {
+  position: relative;
   display: flex;
-  align-items: center;
   gap: 12px;
+  align-items: center;
 }
 
 .username {
   font-weight: 700;
+}
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  padding: 10px;
+  border-radius: 15px;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition:
+    opacity 250ms ease,
+    top 500ms ease;
+  backdrop-filter: blur(15px);
+}
+.dropdown:hover,
+.dropdown:focus-within,
+.username:hover + .dropdown {
+  top: -17px;
+  opacity: 1;
+  pointer-events: unset;
+}
+.dropdown button {
+  cursor: alias;
 }

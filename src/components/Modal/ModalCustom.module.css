@@ -17,6 +17,15 @@
   opacity: 0;
 }
 
+/* hide scrollbar */
+.modalContent::-webkit-scrollbar {
+  width: 0 !important;
+}
+.modalContent {
+  -ms-overflow-style: none;
+}
+/* /hide scrollbar */
+
 .modalContent {
   position: fixed;
   top: 50%;

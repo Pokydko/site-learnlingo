@@ -10,6 +10,7 @@ import { selectIsRefreshing } from "./redux/auth/selectors";
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const HomePage = lazy(() => import("./pages/HomePage"));
 const TeachersPage = lazy(() => import("./pages/TeachersPage"));
+const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
 
 export default function App() {
   // const location = useLocation();
@@ -42,7 +43,10 @@ export default function App() {
           path="/favorites"
           element={
             //
-            <PrivateRoute redirectTo="/teachers" component={<TeachersPage />} />
+            <PrivateRoute
+              redirectTo="/favorites"
+              component={<FavoritesPage />}
+            />
           }
         />
         <Route path="*" element={<NotFoundPage />} />

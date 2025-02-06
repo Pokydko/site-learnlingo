@@ -1,0 +1,7 @@
+.teachersPage {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-radius: 24px;
+  background-color: #f8f8f8;
+  min-height: calc(100dvh - 72px);
+}

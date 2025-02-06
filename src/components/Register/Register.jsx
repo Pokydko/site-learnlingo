@@ -28,9 +28,14 @@ const Register = () => {
         need some information. Please provide us with the following information
       </p>
       <form className={css.form} onSubmit={handleRegister} autoComplete="off">
-        <input type="text" name="name" placeholder="Name" />
-        <input type="email" name="email" placeholder="Email" />
-        <input type="password" name="password" placeholder="Password" />
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
         <button type="submit" className="btn modalBtn">
           Register
         </button>

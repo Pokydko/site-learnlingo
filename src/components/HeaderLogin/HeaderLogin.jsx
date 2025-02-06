@@ -1,15 +1,23 @@
 import css from "./HeaderLogin.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { loadFavorites } from "../../redux/teachers/operations";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import UserMenu from "../UserMenu/UserMenu.jsx";
 import Modal from "../Modal/Modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Login from "../Login/Login.jsx";
 import Register from "../Register/Register.jsx";
 
 export default function HeaderLogin() {
   const [modalContent, setModalContent] = useState(false);
   const isLoggedIn = useSelector(selectIsLoggedIn);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      dispatch(loadFavorites());
+    }
+  }, [isLoggedIn, dispatch]);
 
   return (
     <div className={css.logReg}>
